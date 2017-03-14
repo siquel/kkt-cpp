@@ -30,6 +30,8 @@ dofile (path.join(BGFX_DIR, "scripts/bgfx.lua"))
 group "libs"
 bgfxProject("", "StaticLib", {})
 
+dofile(path.join(BX_DIR, "scripts/bx.lua"))
+
 --if os.is("windows") then
 --	if not os.getenv("SDL2_DIR") then
 --		print("Set SDL2_DIR enviroment variable.")
@@ -42,7 +44,8 @@ project "kkt"
 	configuration {}
 
 	links {
-		"bgfx"
+		"bgfx",
+		"bx"
 	}
 
 	files {
