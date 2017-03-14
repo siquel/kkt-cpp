@@ -42,6 +42,7 @@ void render()
 {
     bgfx::touch(0);
 	bgfx::dbgTextClear();
+	bgfx::dbgTextPrintf(0, 1, 0x4f, "Hello world");
     bgfx::frame();
 #if BX_PLATFORM_EMSCRIPTEN
     emscripten_cancel_main_loop();
@@ -88,6 +89,8 @@ int main()
 #endif
 	SDL_DestroyWindow(window);
 	SDL_Quit();
+
+	bgfx::shutdown();
 
 	return 0;
 }
