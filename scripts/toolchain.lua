@@ -187,6 +187,7 @@ function strip()
 --              .. "-s EMTERPRETIFY=1 "
 --              .. "-s EMTERPRETIFY_ASYNC=1 "
             .. "-s TOTAL_MEMORY=268435456 "
+            .. "-s USE_SDL=2 "
 --          .. "-s ALLOW_MEMORY_GROWTH=1 "
 --          .. "-s USE_WEBGL2=1 "
             .. "--memory-init-file 1 "
